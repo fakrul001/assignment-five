@@ -5,10 +5,12 @@ function addingDonation(donation, input){
     const donationAmountNumber = parseFloat(donationAmount);
     const inputDonation = document.getElementById(input).value;
     const inputDonationNumber = parseFloat(inputDonation);
+    const inputDonationIntegerNumber = Math.floor(inputDonationNumber)
 
-    const currentTotalBalance = currentBalanceNumber - inputDonationNumber ;
-    const totalDonation = donationAmountNumber + inputDonationNumber;
-
+    
+    const currentTotalBalance = currentBalanceNumber - inputDonationIntegerNumber ;
+    const totalDonation = donationAmountNumber + inputDonationIntegerNumber;
+    
     document.getElementById('current-balance').innerText = `${currentTotalBalance} BDT`;
     document.getElementById(donation).innerText = `${totalDonation} BDT`;
     document.getElementById(input).value = '';

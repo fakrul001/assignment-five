@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donation</title>
+    <link rel="shortcut icon" href="assets/coin.png" type="image/x-icon" />
 
     <!-- daisy UI cdn -->
     <link
@@ -40,20 +41,24 @@
       <nav>
         <!-- Homepage nav -->
         <div id="home-page" class="backdrop-blur-md bg-orange-200/30">
-          <div class="flex justify-between items-center w-4/5 mx-auto py-6">
+          <div
+            class="flex justify-between items-center lg:w-4/5 mx-4 lg:mx-auto py-6"
+          >
             <button
               id="btn-blog"
-              class="btn border-none bg-gradient-to-tr from-lime via-light-lime to-lime font-semibold text-xl px-6"
+              class="btn w-14 lg:w-20 border-none bg-gradient-to-tr from-lime via-light-lime to-lime font-semibold lg:text-xl lg:px-6"
             >
               Blog
             </button>
             <div class="flex items-center">
               <img class="w-9" src="assets/logo.png" alt="logo" />
-              <h1 class="ml-3 font-bold text-3xl">Donate Bangladesh</h1>
+              <h1 class="ml-3 font-bold lg:text-3xl">Donate Bangladesh</h1>
             </div>
             <div class="flex items-center">
               <img src="assets/coin.png" alt="coin" />
-              <p id="current-balance" class="ml-3 font-semibold text-xl">10000 BDT</p>
+              <p id="current-balance" class="lg:ml-3 font-semibold lg:text-xl">
+                10000 BDT
+              </p>
             </div>
           </div>
         </div>
@@ -62,15 +67,19 @@
 
     <main>
       <!-- Toggle button section -->
-      <section class="text-center py-8 backdrop-blur-md sticky bg-white/30 top-24">
+      <section
+        class="text-center py-3 lg:py-8 backdrop-blur-md sticky bg-white/30 top-20 lg:top-24"
+      >
         <div>
           <button
             id="btn-donation"
-            class="btn bg-gradient-to-tr from-lime via-light-lime to-lime text-xl px-5 mr-4"
+            class="btn bg-gradient-to-tr from-lime via-light-lime to-lime text-xl px-5 mr-4 border-none"
           >
             Donation
           </button>
-          <button id="btn-history" class="btn text-xl px-5">History</button>
+          <button id="btn-history" class="btn text-xl px-5 border-none">
+            History
+          </button>
         </div>
       </section>
 
@@ -78,15 +87,17 @@
       <section id="donation" class="w-4/5 mx-auto">
         <!-- Noakhali section -->
         <div class="border-2 rounded-xl p-6">
-          <div class="flex gap-8">
+          <div class="lg:flex gap-8">
             <img src="assets/noakhali.png" class="rounded-lg" />
             <div>
               <div class="w-48 max-w-4/5 mb-4">
                 <div
-                  class="flex justify-center items-center bg-base-200 rounded-xl py-2 px-4"
+                  class="flex justify-center items-center bg-base-200 rounded-xl py-2 px-4 mt-3 lg:mt-0"
                 >
                   <img src="assets/coin.png" alt="coin" />
-                  <span id="donation-noakhali" class="ml-3 font-semibold">0 BDT</span>
+                  <span id="donation-noakhali" class="lg:ml-3 font-semibold"
+                    >0 BDT</span
+                  >
                 </div>
               </div>
               <div>
@@ -111,24 +122,48 @@
               <button
                 id="btn-donation-noakhali"
                 class="btn bg-gradient-to-tr from-lime via-light-lime to-lime font-bold text-xl w-full"
+                onclick="modal_noakhali.showModal()"
               >
                 Donate Now
               </button>
+
+              <!-- Modal -->
+              <div>
+                <dialog id="modal_noakhali" class="w-4/5 mx-auto modal">
+                  <div class="modal-box">
+                    <h3 class="text-4xl font-bold text-center">Congrats!!!</h3>
+                    <div class="my-4 flex justify-center">
+                      <img class="w-12" src="assets/coin.png" alt="" />
+                    </div>
+                    <p class="pb-4 text-center font-semibold">
+                      You Have Donated for Humankind
+                    </p>
+                    <p class="font-bold text-lg text-center">Successfully</p>
+                    <div class="modal-action flex justify-center">
+                      <form method="dialog">
+                        <button class="btn">Close Conformation</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Feni section -->
         <div class="border-2 rounded-xl p-6 my-8">
-          <div class="flex gap-8">
+          <div class="lg:flex gap-8">
             <img src="assets/feni.png" class="rounded-lg" />
             <div>
               <div class="w-48 max-w-4/5 mb-4">
                 <div
-                  class="flex justify-center items-center bg-base-200 rounded-xl py-2"
+                  class="flex justify-center items-center bg-base-200 rounded-xl py-2 mt-3 lg:mt-0"
                 >
                   <img src="assets/coin.png" alt="coin" />
-                  <span id="donation-feni" class="ml-3 font-semibold">0 BDT</span>
+                  <span id="donation-feni" class="ml-3 font-semibold"
+                    >0 BDT</span
+                  >
                 </div>
               </div>
               <div>
@@ -155,24 +190,48 @@
               <button
                 id="btn-donation-feni"
                 class="btn bg-gradient-to-tr from-lime via-light-lime to-lime font-bold text-xl w-full"
+                onclick="modal_feni.showModal()"
               >
                 Donate Now
               </button>
+
+              <!-- modal -->
+              <div>
+                <dialog id="modal_feni" class="w-4/5 mx-auto modal">
+                  <div class="modal-box">
+                    <h3 class="text-4xl font-bold text-center">Congrats!!!</h3>
+                    <div class="my-4 flex justify-center">
+                      <img class="w-12" src="assets/coin.png" alt="" />
+                    </div>
+                    <p class="pb-4 text-center font-semibold">
+                      You Have Donated for Humankind
+                    </p>
+                    <p class="font-bold text-lg text-center">Successfully</p>
+                    <div class="modal-action flex justify-center">
+                      <form method="dialog">
+                        <button class="btn">Close Conformation</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Quota movement section -->
         <div class="border-2 rounded-xl p-6 my-8">
-          <div class="flex items-center gap-8">
+          <div class="lg:flex items-center gap-8">
             <img src="assets/quota-protest.png" class="rounded-lg" />
             <div>
               <div class="w-48 max-w-4/5 mb-4">
                 <div
-                  class="flex justify-center items-center bg-base-200 rounded-xl py-2"
+                  class="flex justify-center items-center bg-base-200 rounded-xl py-2 mt-3 lg:mt-0"
                 >
                   <img src="assets/coin.png" alt="coin" />
-                  <span id="donation-quota" class="ml-3 font-semibold">0 BDT</span>
+                  <span id="donation-quota" class="ml-3 font-semibold"
+                    >0 BDT</span
+                  >
                 </div>
               </div>
               <div>
@@ -180,7 +239,15 @@
                   Aid for Injured in the Quota Movement
                 </h1>
                 <p class="py-6">
-                  The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                  The recent Quota movement has resulted in numerous injuries
+                  and significant hardship for many individuals. Your support is
+                  crucial in providing medical assistance, rehabilitation, and
+                  necessary supplies to those affected. By contributing, you
+                  help ensure that injured individuals receive the care and
+                  support they need during this challenging time. Every donation
+                  plays a vital role in alleviating their suffering and aiding
+                  in their recovery. Please consider making a donation to
+                  support these brave individuals in their time of need.
                 </p>
                 <input
                   id="input-donation-quota"
@@ -192,17 +259,38 @@
               <button
                 id="btn-donation-quota"
                 class="btn bg-gradient-to-tr from-lime via-light-lime to-lime font-bold text-xl w-full"
+                onclick="modal_quota.showModal()"
               >
                 Donate Now
               </button>
+
+              <!-- modal -->
+              <div>
+                <dialog id="modal_quota" class="w-4/5 mx-auto modal">
+                  <div class="modal-box">
+                    <h3 class="text-4xl font-bold text-center">Congrats!!!</h3>
+                    <div class="my-4 flex justify-center">
+                      <img class="w-12" src="assets/coin.png" alt="" />
+                    </div>
+                    <p class="pb-4 text-center font-semibold">
+                      You Have Donated for Humankind
+                    </p>
+                    <p class="font-bold text-lg text-center">Successfully</p>
+                    <div class="modal-action flex justify-center">
+                      <form method="dialog">
+                        <button class="btn">Close Conformation</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Donation history section -->
-      <section id="history" class="w-4/5 mx-auto">
-      </section>
+      <section id="history" class="hidden w-4/5 mx-auto"></section>
     </main>
 
     <script src="Js/utilities.js"></script>
