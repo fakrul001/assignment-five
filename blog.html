@@ -36,22 +36,29 @@
     </script>
   </head>
   <body>
-    <header>
-      <nav id="blog-page" class="bg-orange-50">
-        <div class="flex justify-between items-center mx-20 p-6">
-          <button
-            id="btn-home"
-            class="btn border-none bg-gradient-to-tr from-lime via-light-lime to-lime font-semibold text-xl px-4"
+    <header class="sticky top-0">
+      <nav>
+        <!-- Homepage nav -->
+        <div class="backdrop-blur-md bg-orange-200/30">
+          <div
+            class="flex justify-between items-center lg:w-4/5 mx-4 lg:mx-auto py-6"
           >
-            Home
-          </button>
-          <div class="flex items-center">
-            <img class="w-9" src="assets/logo.png" alt="logo" />
-            <h1 class="ml-3 font-bold text-3xl">Donate Bangladesh</h1>
-          </div>
-          <div class="flex items-center">
-            <img src="assets/coin.png" alt="coin" />
-            <p class="ml-3 font-semibold text-xl">10000 BDT</p>
+            <button
+              id="btn-home"
+              class="btn w-14 lg:w-20 border-none bg-gradient-to-tr from-lime via-light-lime to-lime font-semibold lg:text-xl lg:px-6"
+            >
+              Home
+            </button>
+            <div class="flex items-center">
+              <img class="w-9" src="assets/logo.png" alt="logo" />
+              <h1 class="ml-3 font-bold lg:text-3xl">Donate Bangladesh</h1>
+            </div>
+            <div class="flex items-center">
+              <img src="assets/coin.png" alt="coin" />
+              <p id="current-balance" class="lg:ml-3 font-semibold lg:text-xl">
+                10000 BDT
+              </p>
+            </div>
           </div>
         </div>
       </nav>
@@ -59,7 +66,7 @@
 
     <main>
         <!-- FAQ section -->
-        <section class="mx-20">
+        <section class="mx-10 lg:mx-20">
             <div class="my-8 flex">
                 <h1 class="mr-3 font-extrabold text-3xl">Important FAQ</h1>
                 <img class="w-8 h-9" src="assets/icons8-ask-question-50.png" alt="question-mark">
